@@ -1,0 +1,80 @@
+.instructions {
+  background-color: $primary-bg;
+}
+
+.instructions__list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    flex-flow: row wrap;
+  }
+}
+
+.instructions__item {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+  @media (min-width: $tablet) {
+    height: 280px;
+    width: 249px;
+  }
+
+
+  &::before {
+    content: "";
+    background-color: $accient-color;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-width: 60px;
+    max-height: 60px;
+    display: block;
+  }
+
+  &--useful {
+    &::before {
+      content: "";
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-image: url("../../icons/stack.svg#icon-leaf");
+      background-size: 30px 32px;
+    }
+  }
+
+  &--powder {
+    &::before {
+      content: "";
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-image: url("../../icons/stack.svg#icon-powder");
+      background-size: 30px 32px;
+    }
+  }
+
+  &--meal {
+    &::before {
+      content: "";
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-image: url("../../icons/stack.svg#icon-eat");
+      background-size: 30px 32px;
+    }
+  }
+
+  &--good {
+    &::before {
+      content: "";
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-image: url("../../icons/stack.svg#icon-time");
+      background-size: 30px 32px;
+    }
+  }
+}
+
