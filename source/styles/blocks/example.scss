@@ -1,0 +1,232 @@
+.example {
+  position: relative;
+  background-color: $accient-bg;
+
+
+  @media (min-width: $tablet) {
+    background-color: transparent;
+    padding-bottom: 101px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-bottom: 0;
+  }
+
+  .example__wrap {
+    @media (min-width: $desktop) {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    // max-width: 100%;
+    height: 462px;
+    display: none;
+    background-color: $accient-bg;
+    z-index: -1;
+
+
+    @media (min-width: $tablet) {
+      content: "";
+      background-color: $accient-bg;
+      display: block;
+    }
+  }
+}
+
+.example__container {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: start;
+  padding-top: 25px;
+  padding-bottom: 20px;
+
+  @media (min-width: $tablet) {
+    padding-bottom: 83px;
+  }
+
+  @media (min-width: $desktop) {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 436px;
+    padding-top: 10px;
+  }
+}
+
+.example__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop) {
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+
+    max-width: 436px;
+  }
+}
+
+.example__title {
+  line-height: 40px;
+  margin: 0;
+
+
+  @media (min-width: $desktop) {
+    padding-bottom: 76px;
+  }
+}
+
+.example__text {
+  font-family: $primary-font-family;
+  color: $primary-color;
+  padding-top: 42px;
+  padding-bottom: 6px;
+  margin: 0;
+
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    padding-top: 74px;
+    padding-bottom: 35px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 80px;
+  }
+}
+
+.example__list {
+  padding: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 32px;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    gap: 43px;
+  }
+}
+
+.example__item {
+  list-style-type: none;
+  border: $secondary-border;
+  border-radius: 4px;
+
+  min-height: 56px;
+  width: 124px;
+  display: block;
+  position: relative;
+
+  @media (min-width: $tablet) {
+    width: 162px;
+    min-height: 72px;
+  }
+}
+
+.example__item-header {
+  font-family: $secondary-font-family;
+  font-size: 24px;
+  margin: 0;
+  padding-top: 14px;
+  color: $secondary-color;
+  text-transform: uppercase;
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    font-size: 30px;
+    line-height: 37px;
+    padding-top: 10px;
+  }
+}
+
+.example__item-text {
+  font-family: $primary-font-family;
+  font-size: 12px;
+  line-height: 12px;
+  color: $primary-color;
+  text-align: center;
+
+  text-transform: lowercase;
+  background-color: $accient-bg;
+  background-size: 87px 24px;
+  position: absolute;
+  bottom: -16px;
+  left: 20px;
+  width: 87px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0;
+
+
+  @media (min-width: $tablet) {
+    font-size: 14px;
+    line-height: 14px;
+    background-color: $primary-bg;
+    // width: max-content;
+    background-size: 142px 27px;
+    width: 142px;
+    bottom: -6px;
+    left: 9px;
+    padding-left: 1px;
+    padding-right: 1px;
+  }
+
+  @media (min-width: $desktop) {
+    background-color: $accient-bg;
+  }
+}
+
+.example__price {
+  font-family: $secondary-font-family;
+  line-height: 20px;
+  color: $secondary-color;
+  text-transform: uppercase;
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: end;
+    font-size: 20px;
+    gap: 9px;
+  }
+
+  @media (min-width: $desktop) {
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: start;
+    gap: 63px;
+  }
+}
+
+.example__slider {
+  z-index: 1;
+  position: relative;
+  aspect-ratio: 280 / 256;
+  grid-template-columns: 1fr 1fr;
+  width: min(100%, 560px);
+  display: grid;
+  margin: 0 auto;
+
+  @media (min-width: $desktop) {
+    grid-area: 1/2/3/3;
+  }
+}
